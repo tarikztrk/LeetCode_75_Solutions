@@ -20,7 +20,7 @@ namespace LeetCode_75_Solutions
      * merged: a p b q c r
      */
     
-    public class Solution
+    public class MergeAlternatelySolution
     {
         public string MergeAlternately(string word1, string word2)
         {
