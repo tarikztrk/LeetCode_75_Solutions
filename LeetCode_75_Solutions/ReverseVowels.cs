@@ -14,7 +14,7 @@ namespace LeetCode_75_Solutions
         //Example 1:
         //Input: "hello"
         //Output: "holle"
-        //Example 2:
+        //Example 2: 
         //Input: "leetcode"
         //Output: "leotcede"
 
