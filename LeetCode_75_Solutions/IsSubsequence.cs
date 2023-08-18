@@ -10,16 +10,27 @@ namespace LeetCode_75_Solutions
     {
         public bool IsSubsequence(string s, string t)
         {
-            bool res = true;
-            var a = s.Distinct().ToArray();
-            foreach (var x in a)
+            int newLocation = -1;
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (!t.Contains(s[i]))
+                {
+                    return false;
+                }
+                newLocation = t.IndexOf(s[i]);
+                t = t.Remove(0, newLocation + 1);
+            }
+            foreach (char x in s)
             {
                 if (!t.Contains(x))
                 {
-                    res = false;
+                    return false;
                 }
+                newLocation = t.IndexOf(x);
+                t =t.Remove(0, newLocation+1);
+
             }
-            return res;
+            return true;
         }
     }
 }
